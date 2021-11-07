@@ -49,7 +49,7 @@
 	});
 
 	// Banner-video. Play/pause. 
-	// #event #function #nojquery
+	// #event #function
 	document.querySelector('.main_banner_media video').addEventListener('click', event => {
 		let video_element = event.target;
 		if (video_element.paused)
@@ -76,7 +76,7 @@
 	}));
 
 	// Full-video. Pause
-	// #function-event #nojquery
+	// #function-event
 	function full_video_play_toggle(event) {
 		let video_container = event.target.closest('.block_full_video.video_play');
 		if (video_container === null) return false;
@@ -91,11 +91,11 @@
 	}
 
 	// Education-info Open/hide
-	// #event #function #nojquery
+	// #event #function
 	document.querySelectorAll('.block_educations_li').forEach(element => element.addEventListener('click', () => element.classList.toggle('active')));
 
 	// Cursers. Get and add more items
-	// #event #function #nojquery
+	// #event #function  #server
 	document.querySelectorAll('.cursers_more').forEach(element => element.addEventListener('click', event => {
 		let cursers_list = document.querySelector('.cursers_list_ul');
 
@@ -111,9 +111,8 @@
 
 
 	// Booking to offline courses
-	// #event #function #nojquery
+	// #event #function #server
 	document.querySelector('.book_success').addEventListener('click', event => {
-
 		/* --- POST DATA TO SERVER --- */
 
 		document.querySelector('.modal_book_offline').classList.add('success_step');

@@ -18,9 +18,9 @@
 		rel="stylesheet">
 
 	<!-- Fonts. Icons -->
-	<link rel="stylesheet" href="./css/font-awesome-4.7.0.css">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./css/font-awesome-4.7.0.css">
 
 	<!-- CSS. Bootstrap -->
 	<link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
@@ -53,6 +53,29 @@
 	</div>
 
 	<div class="modal">
+		<div class="modal_win container modal_view_video">
+			<div class="modal_header">
+				<div class="buttons">
+					<button class="modal_button close">Close</button>
+				</div>
+			</div>
+			<div class="modal_content">
+				<video loop controls>
+					<source src="./video/temp/video_expert.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="modal_footer">
+				<div class="buttons">
+					<button class="modal_button video_play">&#9654;</button>
+					<button class="modal_button video_pause">&#9612; &#9612;</button>
+				</div>
+				<div class="line"></div>
+				<div class="buttons">
+					<button class="modal_button close">Close</button>
+				</div>
+			</div>
+		</div>
+		
 		<div class="modal_win container modal_team">
 			<div class="modal_header">
 				<img src="./img/team/team_1.png" alt=" ">
@@ -77,29 +100,6 @@
 			</div>
 			<div class="modal_footer">
 				<button class="modal_button close">Close</button>
-			</div>
-		</div>
-
-		<div class="modal_win container modal_view_video">
-			<div class="modal_header">
-				<div class="buttons">
-					<button class="modal_button close">Close</button>
-				</div>
-			</div>
-			<div class="modal_content">
-				<video loop controls>
-					<source src="./video/temp/video_expert.mp4" type="video/mp4">
-				</video>
-			</div>
-			<div class="modal_footer">
-				<div class="buttons">
-					<button class="modal_button video_play">&#9654;</button>
-					<button class="modal_button video_pause">&#9612; &#9612;</button>
-				</div>
-				<div class="line"></div>
-				<div class="buttons">
-					<button class="modal_button close">Close</button>
-				</div>
 			</div>
 		</div>
 

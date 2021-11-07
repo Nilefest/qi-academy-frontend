@@ -34,6 +34,18 @@ let getCookie = (name) => {
 	return matches ? decodeURIComponent(matches[1]) : undefined;
 };
 
+// Copy text to clipboard
+// #function
+let copyText = (text) => {
+	if (text === null) return false;
+	let input = document.createElement('input');
+	input.value = text;
+	input.focus();
+	input.select();
+	input.setSelectionRange(0, 99999);
+	navigator.clipboard.writeText(input.value);
+};
+
 /* PRIVATE */
 (() => {
 	// Slider with video-reviews
@@ -111,6 +123,7 @@ let getCookie = (name) => {
 	// #code
 	if (getCookie("cookie_mess") != "no") {
 		let cookiewin = document.querySelector('.cookie_message');
+		if (cookiewin === null) return false;
 		cookiewin.classList.add('mess_show');
 
 		// Close message about Cookie
@@ -121,4 +134,7 @@ let getCookie = (name) => {
 		});
 	}
 
+	// Copy text
+	// #event
+	document.querySelectorAll('.button_copy').forEach(element => element.closest('.button_copy').addEventListener('click', () => copyText(element.getAttribute('data-textCopy'))));
 })();

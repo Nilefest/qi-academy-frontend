@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Qj team | QI Academy</title>
+	<title>Lekcja | QI Academy</title>
 
 	<!-- Fonts. Google: Montserrat, Lato -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,8 @@
 		rel="stylesheet">
 
 	<!-- Fonts. Icons -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 	<link rel="stylesheet" href="./css/font-awesome-4.7.0.css">
 
 	<!-- CSS. Bootstrap -->
@@ -29,6 +31,7 @@
 	<link rel="stylesheet" href="./css/animations.css">
 
 	<!-- CSS. Custom -->
+	<link rel="stylesheet" href="./css/lecture.css">
 	<link rel="stylesheet" href="./css/team.css">
 </head>
 
@@ -71,7 +74,7 @@
 				</div>
 			</div>
 		</div>
-		 
+
 		<div class="modal_win container modal_team">
 			<div class="modal_header">
 				<img src="./img/team/team_1.png" alt=" ">
@@ -96,6 +99,32 @@
 			</div>
 			<div class="modal_footer">
 				<button class="modal_button close">Close</button>
+			</div>
+		</div>
+
+		<div class="modal_win modal_get_sertificate">
+			<p class="message">Twoja prośba została zaakceptowana. Certyfikat zostanie wysłany na Twój e-mail w ciągu
+				kilku minut.</p>
+			<button class="button close">Ok</button>
+		</div>
+
+		<div class="modal_win modal_send_review">
+			<i class="fal fa-times icon_close close"></i>
+			<div class="form">
+				<p class="message">Prześlij swoją recenzję w formacie wideo lub tekstowym.</p>
+				<label class="video_field">
+					<span class="field_text"><i class="fal fa-upload icon"></i> <span>Prześlij wideo</span></span>
+					<input type="file" accept="video/mp4,video/x-m4v,video/*" class="d-none upload_video_review">
+				</label>
+				<textarea class="review_text" placeholder="Twój komentarz"></textarea>
+				<div class="buttons">
+					<button class="cancel close">Anulowanie</button>
+					<button class="send_review">Wysłać</button>
+				</div>
+			</div>
+			<div class="success_message">
+				<p class="message">Dziękujemy, <br>Twoja recenzja została przyjęta.</p>
+				<button class="button close">Ok</button>
 			</div>
 		</div>
 	</div>
@@ -142,130 +171,117 @@
 		</div>
 	</header>
 
-	<div class="content container team_content">
-		<h1>QI team</h1>
-		<ul class="team_list_ul">
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_1.png);">
-					<span class="team_open_modal view">View</span>
+	<div class="content course_content container">
+		<div class="lesson_list">
+			<h3><span>Lekcje</span> <i class="far fa-chevron-down icon_open"></i></h3>
+			<ul class="lesson_list_ul">
+				<li class="lesson_list_li">
+					<a href="#lessonopen" class="lesson_name">
+						<span class="num">1.</span>
+						<span class="title">Użycie narzędzi</span>
+						<i class="far fa-check-circle icon"></i>
+					</a>
+				</li>
+				<li class="lesson_list_li">
+					<a class="lesson_name" href="#lessonopen">
+						<span class="num">2.</span>
+						<span class="title">Pierwsza duża praktyka</span>
+						<i class="far fa-check-circle icon"></i>
+					</a>
+				</li>
+				<li class="lesson_list_li active">
+					<span class="lesson_name" href="#lessonopen">
+						<span class="num">3.</span>
+						<span class="title">Wnioski. druga duża praktyka</span>
+						<i class="far fa-circle icon"></i>
+					</span>
+				</li>
+				<li class="lesson_list_li">
+					<a class="lesson_name" href="#lessonopen">
+						<span class="num">4.</span>
+						<span class="title">Użycie narzędzi</span>
+						<i class="icon"></i>
+					</a>
+				</li>
+				<li class="lesson_list_li">
+					<a class="lesson_name" href="#lessonopen">
+						<span class="num">5.</span>
+						<span class="title">Pierwsza duża praktyka</span>
+					</a>
+				</li>
+				<li class="lesson_list_li">
+					<a class="lesson_name" href="#lessonopen">
+						<span class="num">6.</span>
+						<span class="title">Wnioski. druga duża praktyka</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="finished_lesson_block unfinished">
+				<h3 class="title">Obejrzałem wideo <span class="range"><span class="current">3</span> / 4</span></h3>
+				<p class="nofinished_info">Ukończ wszystkie wykłady i otrzymaj certyfikat</p>
+				<button class="button finish_lesson"><span>Słuchałem</span> <i
+						class="far fa-check-circle icon"></i></button>
+				<button class="button get_sertificate">Uzyskać certyfikat</button>
+				<button class="send_review"><span>Wystawić opinię</span> <i
+						class="fas fa-hand-point-up icon"></i></button>
+			</div>
+		</div>
+		<div class="lesson_block">
+			<div class="lesson_media">
+				<video loop controls>
+					<source src="./video/temp/video_expert.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="lesson_tools">
+				<div class="instructor team_open_modal view">
+					<div class="avatar"></div>
+					<span class="name">Instruktor <br>Herman <br>Ahafontsev</span>
 				</div>
-				<span class="name">Herman Ahafontsev</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_2.png);">
-					<span class="team_open_modal view">View</span>
+				<div class="course_buttons">
+					<button class="course_button download"><span>Pobierz materiały do nauki</span> <i
+							class="fal fa-download icon"></i></button>
+					<!--<a href="#course_download" download class="course_button download"><span>Pobierz materiały do nauki</span> <i class="fal fa-download icon"></i></a>-->
 				</div>
-				<span class="name">Anna Levytska</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_3.png);">
-					<span class="team_open_modal view">View</span>
+			</div>
+			<div class="lesson_info">
+				<div class="lesson_description">
+					<p>Brazilian Technique - metoda rozjaśnienia przez tapirowanie wlosów. Będziemy pokazywać jak
+						pracować z tapirem w koloryzacjach włosów. Pokażemy nie tylko jak prawidłowo tapirować włosy, a
+						tak że jak rozczesywać tapir, żeby dla klienta to nie było "przykrym doświadczeniem". Brazilian
+						Technique - metoda rozjaśnienia przez tapirowanie wlosów. Będziemy pokazywać jak pracować z
+						tapirem w koloryzacjach włosów. Pokażemy nie tylko jak prawidłowo tapirować włosy, a tak że jak
+						rozczesywać tapir, żeby dla klienta to nie było "przykrym doświadczeniem". </p>
+					<ul>
+						<li>Pokażemy nie tylko jak prawidłowo tapirować</li>
+						<li>Pokażemy nie tylko jak prawidłowo tapirować</li>
+						<li>Pokażemy nie tylko jak prawidłowo tapirować</li>
+					</ul>
 				</div>
-				<span class="name">Konstantin Herbin</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_1.png);">
-					<span class="team_open_modal view">View</span>
+				<div class="homework">
+					<h4 class="title">Zadanie domowe</h4>
+					<p class="homework_description">Brazilian Technique - metoda rozjaśnienia przez tapirowanie wlosów.
+						Będziemy pokazywać jak pracować z tapirem w koloryzacjach włosów. Pokażemy nie tylko jak
+						prawidłowo tapirować włosy, a tak że jak rozczesywać tapir, żeby dla klienta to nie było
+						"przykrym doświadczeniem".
+					</p>
+					<p class="homework_description info">Wyślij swoją pracę domową na ten mail, a na pewno odpowiemy.
+					</p>
+
+					<button class="homework_button send_homework button_copy"
+						data-textCopy="hair@qi.com"><span>hair@qi.com</span> <i class="fas fa-copy icon"></i></button>
 				</div>
-				<span class="name">Herman Ahafontsev</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_2.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Anna Levytska</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_3.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Konstantin Herbin</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_1.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Herman Ahafontsev</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_2.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Anna Levytska</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_3.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Konstantin Herbin</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_1.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Herman Ahafontsev</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_2.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Anna Levytska</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-			<li class="team_list_li">
-				<div class="team_list_media" style="background-image: url(img/team/team_3.png);">
-					<span class="team_open_modal view">View</span>
-				</div>
-				<span class="name">Konstantin Herbin</span>
-				<ul class="social">
-					<li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-					<li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>
-			</li>
-		</ul>
+			</div>
+		</div>
+
+		<div class="finished_lesson_block unfinished mobile">
+			<h3 class="title">Obejrzałem wideo <span class="range"><span class="current">3</span> / 4</span></h3>
+			<p class="nofinished_info">Ukończ wszystkie wykłady i otrzymaj certyfikat</p>
+			<button class="button finish_lesson"><span>Słuchałem</span> <i
+					class="far fa-check-circle icon"></i></button>
+			<button class="button get_sertificate">Uzyskać certyfikat</button>
+			<button class="send_review"><span>Wystawić opinię</span> <i class="fas fa-hand-point-up icon"></i></button>
+		</div>
 	</div>
 
 	<footer>
@@ -311,6 +327,8 @@
 		</div>
 	</footer>
 
+	<!-- Templates -->
+
 	<!-- JS. JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
@@ -324,6 +342,8 @@
 
 	<!-- JS. Custom -->
 	<script src="./js/team.js"></script>
+	<script src="./js/lecture.js"></script>
+
 </body>
 
 </html>
