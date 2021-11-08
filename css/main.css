@@ -913,6 +913,7 @@
 	border-color: #fff;
 	font-size: 18px;
 	font-weight: 700;
+	outline: none;
 }
 
 .subscribe_field .subscribe_email {
@@ -933,6 +934,7 @@
 
 .subscribe_field .subscribe_button:hover {
 	cursor: pointer;
+	color: #f77968;
 }
 
 @media screen and (min-width: 1440px) {}
