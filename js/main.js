@@ -108,8 +108,6 @@
 		}
 	}));
 
-
-
 	// Booking to offline courses
 	// #event #function #server
 	document.querySelector('.book_success').addEventListener('click', event => {
