@@ -137,4 +137,19 @@ let copyText = (text) => {
 	// Copy text
 	// #event
 	document.querySelectorAll('.button_copy').forEach(element => element.closest('.button_copy').addEventListener('click', () => copyText(element.getAttribute('data-textCopy'))));
+
+	// Toggle modal-win SignIn <-> SignUp
+	// #event #function
+	document.querySelectorAll('.modal_sign_account .step_toggle').forEach(element => element.addEventListener('click', () => {
+		document.querySelector('.modal_sign_account').classList.toggle('signin_step');
+		document.querySelector('.modal_sign_account').classList.toggle('signup_step');
+	}));
+
+	// Open modal SignIn-SignUp
+	// #event #function
+	document.querySelectorAll('.open_sign_modal').forEach(element => element.addEventListener('click', () => {
+		document.querySelector('.modal_sign_account').classList.replace('signin_step', 'signup_step');
+		modalOpen('.modal_sign_account');
+	}));
+
 })();
