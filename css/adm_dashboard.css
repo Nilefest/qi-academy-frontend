@@ -1,0 +1,131 @@
+body {
+    min-width: 1025px;
+    overflow-x: auto;
+}
+
+.container {
+    min-width: 1000px;
+}
+
+/* Header */
+header {
+    /* position: absolute; */
+    padding-left: 20px;
+}
+
+header a {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 25px;
+}
+
+header a .icon_link {
+    color: #fff;
+    opacity: 0.5;
+    display: inline-block;
+}
+
+header a:hover .icon_link {
+    opacity: 1;
+}
+
+header .logo {
+    font-weight: 300;
+    text-transform: none;
+}
+
+header .logo::after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.3em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f023";
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+header .to_site {
+    color: #FFF9C6;
+    margin: 0px 20px;
+}
+
+header .to_setting {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 0px 20px;
+}
+
+header .to_setting:hover {
+    cursor: pointer;
+    background-color: #222;
+}
+
+header .to_setting .icon_link {
+    margin-left: 5px;
+}
+
+header .logout {
+    font-weight: bold;
+}
+
+header .logout:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard */
+.dashboard_nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px 20px 50px;
+}
+
+.dashboard_item {
+    margin: 0px 30px 30px 0px;
+    padding: 15px 20px;
+    display: flex;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 130px;
+    width: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dashboard_item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.dashboard_item.disabled {
+    opacity: 0.5;
+}
+
+.dashboard_item.disabled:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 50px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f023";
+    opacity: 0.3;
+    color: #000;
+    position: absolute;
+}
+
+.dashboard_item .title {
+    display: block;
+    text-align: center;
+    color: #000;
+}
