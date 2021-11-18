@@ -177,12 +177,16 @@
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #000;
-	font-weight: bold;
 	padding: 5px 10px;
+}
+
+.lesson_list_menu a.finished {
+	font-weight: bold;
 }
 
 .lesson_list_menu a.active {
 	color: #F84C34;
+	font-weight: bold;
 }
 
 .lesson_list_menu a:hover {
