@@ -172,8 +172,25 @@
 	</header>
 
 	<div class="content course_content container">
-		<div class="lesson_list">
+		<div class="lesson_list ">
+			<!-- add class "mobile_toggle_list" for activate alternative toggle-list (for mobile) -->
+
+			<div class="lesson_list_menu">
+				<input autocomplete="no" type="checkbox" class="d-none list_menu_check" id="list_menu_check">
+				<label for="list_menu_check" class="button list_menu_button"><span>lista wideo</span> <i
+						class="fas fa-ellipsis-v icon_menu"></i></label>
+				<ul class="list_menu_ul">
+					<li><a href="#lecture">1. <span>Użycie narzędzi narzędzi narzędzi narzędzi</span></a></li>
+					<li><a href="#lecture">2. <span>Pierwsza duża praktyka</span></a></li>
+					<li><a class="active" href="#lecture">3. <span>Wnioski. druga duża praktyka</span></a></li>
+					<li><a href="#lecture">4. <span>Użycie narzędzi</span></a></li>
+					<li><a href="#lecture">5. <span>Pierwsza duża praktyka</span></a></li>
+					<li><a href="#lecture">6. <span>Wnioski. druga duża praktyka</span></a></li>
+				</ul>
+			</div>
+
 			<h3><span>Lekcje</span> <i class="far fa-chevron-down icon_open"></i></h3>
+
 			<ul class="lesson_list_ul">
 				<li class="lesson_list_li">
 					<a href="#lessonopen" class="lesson_name">
