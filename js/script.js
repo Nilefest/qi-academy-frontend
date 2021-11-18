@@ -48,40 +48,6 @@ let copyText = (text) => {
 
 /* PRIVATE */
 (() => {
-	// Slider with video-reviews
-	// #init #jquery
-	$('.block_video_reviews_ul').slick({
-		dots: false,
-		arrows: true,
-		prevArrow: $('.block_video_reviews_arrow.prev'),
-		nextArrow: $('.block_video_reviews_arrow.next'),
-		speed: 500,
-		infinite: true,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-
-		responsive: [
-			{
-				breakpoint: 1441,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-				}
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 1,
-				}
-			},
-		]
-	});
-
 	// Open/Close main-navigation. 
 	// #event
 	document.querySelectorAll('.nav_button').forEach(element => element.addEventListener('click', () => document.body.classList.toggle('nav_button_active')));
