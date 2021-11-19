@@ -79,7 +79,7 @@ header .logout:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 50px 20px 50px;
+    margin: 50px 10px 50px;
 }
 
 .dashboard_item {
@@ -107,6 +107,10 @@ header .logout:hover {
     opacity: 0.9;
 }
 
+.dashboard_item.item_add .title {
+    color:#F84C34;
+}
+
 .dashboard_item.disabled {
     opacity: 0.5;
 }
@@ -128,4 +132,41 @@ header .logout:hover {
     display: block;
     text-align: center;
     color: #000;
+}
+
+/* Button Back */
+.button.back {
+    color: #fff;
+    display: inline-block;
+    background-color: #000;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 5px 15px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 30px 10px 5px 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.button.back:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button.back:before {
+    content: "\f053";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 0.8em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0px 7px 0px 3px;
+    opacity: 0.8;
+}
+
+.button.back:hover:before{
+    padding: 0px 10px 0px 0px;
+    opacity: 0.9;
 }
