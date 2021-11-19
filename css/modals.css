@@ -128,6 +128,134 @@
 	color: #000;
 }
 
+/* Modal. Team ADM */
+.modal_win.modal_show.modal_team_adm {
+	display: flex;
+}
+
+.modal_team_adm .modal_header {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal_team_adm .modal_header .name {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 21px;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+.modal_team_adm .modal_header .team_img {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	flex-grow: 1;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.modal_team_adm .modal_header .team_img .icon_add {
+	opacity: 0.1;
+	color: #aaa;
+	font-size: 50px;
+}
+
+.modal_team_adm .modal_header .team_img:hover .icon_add {
+	opacity: 0.5;
+}
+
+.modal_team_adm .modal_header .team_img:hover {
+	cursor: pointer;
+}
+
+.modal_team_adm .modal_content {
+	flex-grow: 1;
+	padding: 30px 10px;
+	font-family: 'Lato', sans-serif;
+	margin: 0px 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal_team_adm .modal_content .textarea {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 2em;
+	margin-bottom: 30px;
+	width: 100%;
+	border: 2px dotted #aaa;
+	opacity: 0.8;
+	padding: 5px 15px;
+	flex-grow: 1;
+}
+
+.modal_team_adm .social_field {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.modal_team_adm .social_field .title {
+	padding-right: 10px;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+	width: 100px;
+}
+
+.modal_team_adm input.text {
+	border: 1px solid #000;
+	border-radius: 10px;
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	opacity: 0.9;
+	flex-grow: 1;
+	padding: 10px 15px;
+}
+
+.modal_team_adm .social_field input.text {
+	font-style: italic;
+}
+
+.modal_team_adm .name input.text {
+	color: #F84C34;
+	text-transform: uppercase;
+}
+
+.modal_team_adm .modal_footer {
+	padding: 30px;
+	text-align: center;
+	width: 200px;
+}
+
+.modal_team_adm .modal_button {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.modal_team_adm .modal_button.close {
+	background-color: #000;
+	color: #fff;
+}
+
+.modal_team_adm .modal_button.close:hover {
+	background-color: #fff;
+	color: #000;
+}
+
 /* Modal. View video */
 .modal_view_video {
 	max-height: 80vh;
@@ -690,7 +818,7 @@
 	opacity: 0;
 }
 
-.modal_sign_account.signin_step{
+.modal_sign_account.signin_step {
 	margin-top: 200px;
 }
 

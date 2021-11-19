@@ -74,12 +74,17 @@ header .logout:hover {
     text-decoration: underline;
 }
 
+/* Content */
+.content {
+    margin-top: 40px;
+}
+
 /* Dashboard */
 .dashboard_nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 50px 10px 50px;
+    margin: 20px 10px 50px;
 }
 
 .dashboard_item {
@@ -108,7 +113,7 @@ header .logout:hover {
 }
 
 .dashboard_item.item_add .title {
-    color:#F84C34;
+    color: #F84C34;
 }
 
 .dashboard_item.disabled {
@@ -145,11 +150,11 @@ header .logout:hover {
     text-align: center;
     border: 1px solid #fff;
     border-radius: 10px;
-    margin: 30px 10px 5px 10px;
+    margin: 5px 10px 25px 10px;
     font-family: 'Lato', sans-serif;
 }
 
-.button.back:hover{
+.button.back:hover {
     text-decoration: none;
     cursor: pointer;
 }
@@ -166,7 +171,27 @@ header .logout:hover {
     opacity: 0.8;
 }
 
-.button.back:hover:before{
+.button.back:hover:before {
     padding: 0px 10px 0px 0px;
     opacity: 0.9;
+}
+
+/* For Team */
+.team_list_ul {
+    padding: 0px 10px;
+}
+
+.team_list_media .view {
+	width: 80%;
+	height: auto;
+	border-radius: 0px;
+	left: 0px;
+    top: 40%;
+	bottom: auto;
+	font-size: 12px;
+	padding: 15px 10px;
+	margin: 30px 10%;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: lowercase;
 }

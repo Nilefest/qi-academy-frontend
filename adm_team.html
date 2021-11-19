@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Team | ADM QI Academy</title>
+
+    <!-- Fonts. Google: Montserrat, Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fonts. Icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0.css">
+
+    <!-- CSS. Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+
+    <!-- CSS. Common -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modals.css">
+    <link rel="stylesheet" href="./css/animations.css">
+
+    <!-- CSS. Custom -->
+    <link rel="stylesheet" href="./css/team.css">
+    <link rel="stylesheet" href="./css/adm_dashboard.css">
+
+</head>
+
+<body class="">
+    <div class="modal">
+        <div class="modal_win container modal_team_adm" data-teamId="0">
+            <div class="modal_header">
+                <label class="team_img" style="background-image: url(./img/temp/team_1.png);">
+                    <i class="fas fa-plus icon_add"></i>
+                    <input type="file" class="d-none" accept="image/png, image/gif, image/jpeg">
+                </label>
+                <div class="team_info">
+                    <div class="name">
+                        <input type="text" class="text team_name" placeholder="имя">
+                    </div>
+                </div>
+            </div>
+            <div class="modal_content">
+                <textarea class="textarea team_info"
+                    autocomplete="no">Brazilian Technique - metoda rozjaśnienia przez tapirowanie wlosów. Będziemy pokazywać jak pracować z tapirem w koloryzacjach włosów. Pokażemy nie tylko jak prawidłowo tapirować włosy, a tak że jak rozczesywać tapir, żeby dla klienta to nie było "przykrym doświadczeniem".</textarea>
+                <label class="social_field">
+                    <span class="title">Instagram</span>
+                    <input type="text" class="text soc_instaram" placeholder="ссылка на профиль">
+                </label>
+                <label class="social_field">
+                    <span class="title">Facebook</span>
+                    <input type="text" class="text soc_facebook" placeholder="ссылка на профиль">
+                </label>
+            </div>
+            <div class="modal_footer">
+                <button class="modal_button close save">Сохранить</button>
+                <button class="modal_button close">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <a href="adm_dashboard.html" class="logo" title="To main page">
+                <!--				
+				<span class="account_logo">Moje biuro</span>
+				-->
+                <span class="full_text">Qi ADMIN</span>
+                <span class="short_text">Qi</span>
+            </a>
+
+            <a href="#index" class="to_site">QILABEL.COM <i class="fas fa-link icon_link"></i></a>
+
+            <a href="#setting" class="to_setting">Настройки админ панели <i class="fas fa-cog icon_link"></i></a>
+
+            <a href="#logout" class="logout">Выйти</a>
+        </div>
+    </header>
+
+    <div class="content container team_content">
+        <a href="adm_dashboard.html" class="button back">back</a>
+        <ul class="team_list_ul">
+            <li class="team_list_li team_add"><i class="fas fa-plus icon_add"></i></li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_1.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Herman Ahafontsev</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_2.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Anna Levytska</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_3.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Konstantin Herbin</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_1.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Herman Ahafontsev</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_2.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Anna Levytska</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_3.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Konstantin Herbin</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_1.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Herman Ahafontsev</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_2.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Anna Levytska</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_3.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Konstantin Herbin</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_1.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Herman Ahafontsev</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_2.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Anna Levytska</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            <li class="team_list_li">
+                <div class="team_list_media" style="background-image: url(img/team/team_3.png);">
+                    <span class="team_adm_modal view">Редактировать</span>
+                </div>
+                <span class="name">Konstantin Herbin</span>
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="container">
+            <ul class="contact">
+                <li>
+                    <a href="#watsapp">
+                        <img src="./img/icons/icons8-whatsapp.png" alt="Icon Watsapp">
+                        <span>Watsapp</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#facebook_messenger">
+                        <img src="./img/icons/icons8-facebook-messenger.png" alt="Icon Facebook Messenger">
+                        <span>Facebook Messenger</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#phone">
+                        <img src="./img/icons/icons8-phone.png" alt="Icon Phone">
+                        <span>+48 949 000 555</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer_info">
+                <ul class="links">
+                    <li><a href="#footer_link">Polityka przetwarzania danych osobowych</a></li>
+                    <li><a href="#footer_link">Oferta publiczna</a></li>
+                    <li><a href="#footer_link">Płatność kartą kredytową</a></li>
+                </ul>
+
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+
+                <div class="footer_buttons">
+                    <button class="footer_button">Obszar osobisty</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Templates -->
+    <template id="tpl_team_item">
+        <li class="team_list_li">
+            <div class="team_list_media" style="background-image: url();">
+                <span class="team_adm_modal view">Редактировать</span>
+            </div>
+            <span class="name">***</span>
+            <ul class="social">
+                <li class="soc_facebook"><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                <li class="soc_instagram"><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </li>
+    </template>
+
+    <!-- JS. JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <!-- JS. Slick -->
+    <link rel="stylesheet" type="text/css" href="./lib/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./lib/slick/slick-theme.css" />
+    <script src="./lib/slick/slick.min.js"></script>
+    <script src="./lib/slick-init.js"></script>
+
+    <!-- JS. Common -->
+    <script src="./js/script.js"></script>
+
+    <!-- JS. Custom -->
+    <script src="./js/team.js"></script>
+    <script src="./js/adm_team.js"></script>
+
+</body>
+
+</html>
