@@ -575,6 +575,43 @@
 	cursor: pointer;
 }
 
+/* Modal. Show info with button OK */
+.modal_simple_info {
+	background-color: #fff;
+	padding: 50px 60px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	max-width: 500px;
+	min-height: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal_simple_info.modal_show {
+	display: flex;
+}
+
+.modal_simple_info .message {
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.modal_simple_info .button {
+	text-transform: uppercase;
+	border: 1px solid #FFF9C6;
+	background-color: #FFF9C6;
+	padding: 7px 7px;
+	font-size: 18px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.modal_simple_info .button:hover {
+	background-color: #fff;
+	cursor: pointer;
+}
+
 /* Message about Cookie */
 .cookie_message {
 	border-radius: 10px;

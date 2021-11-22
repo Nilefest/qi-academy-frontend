@@ -38,7 +38,12 @@
 </head>
 
 <body class="">
-	<div class="modal"></div>
+	<div class="modal">
+		<div class="modal_win modal_simple_info">
+			<p class="message">Сохранено!</p>
+			<button class="button close">Ok</button>
+		</div>
+	</div>
 
 	<header>
 		<div class="container">
@@ -60,11 +65,61 @@
 
 	<div class="content container">
 		<a href="adm_dashboard.html" class="button back">back</a>
-		<nav class="dashboard_nav">
-			<a href="#adm_link" class="dashboard_item item_add"><span class="title">Добавить курс</span></a>
-			<a href="#adm_link" class="dashboard_item"><span class="title">Braziliana</span></a>
-			<a href="#adm_link" class="dashboard_item"><span class="title">Course 2</span></a>
-		</nav>
+		<h1 class="title">Редактор офлайн курса</h1>
+		<div class="courses_offline">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Город</th>
+						<th>Дата</th>
+						<th class="days">К-во дней</th>
+						<th class="name">Название лекций</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="course_item info">
+						<td class="tools"><i class="fas fa-trash-alt icon_tool remove_course"></i></td>
+						<td><input type="text" class="text" placeholder="Warszawa"></td>
+						<td><input type="date" class="text" placeholder=""></td>
+						<td class="days"><input min="1" type="number" class="text" placeholder="1 dzień"></td>
+						<td class="name"><input type="title" class="text" placeholder="Lekcja: ..."></td>
+					</tr>
+					<tr class="course_item link">
+						<td class="tools"></td>
+						<td><label for="link_video_0">Ссылка на видео-презентацию <i class="fas fa-question-circle-o icon_info" title="Заполнить поле, если у курса есть вступительное видео-презентацию"></i></label></td>
+						<td colspan="3"><input id="link_video_0" type="text" class="text link_video"
+								placeholder="https://..."></td>
+					</tr>
+					<tr class="course_item info">
+						<td rowspan="2" class="tools"><i class="fas fa-trash-alt icon_tool remove_course"></i></td>
+						<td><input type="text" class="text" placeholder="Warszawa"></td>
+						<td><input type="date" class="text" placeholder=""></td>
+						<td class="days"><input min="1" type="number" class="text" placeholder="1 dzień"></td>
+						<td class="name"><input type="title" class="text" placeholder="Lekcja: ..."></td>
+					</tr>
+					<tr class="course_item link">
+						<td><label for="link_video_0">Ссылка на видео-презентацию <i class="fas fa-question-circle-o icon_info" title="Заполнить поле, если у курса есть вступительное видео-презентацию"></i></label></td>
+						<td colspan="3"><input id="link_video_0" type="text" class="text link_video"
+								placeholder="https://..."></td>
+					</tr>
+					<tr class="course_item info">
+						<td rowspan="2" class="tools"><i class="fas fa-trash-alt icon_tool remove_course"></i></td>
+						<td><input type="text" class="text" placeholder="Warszawa"></td>
+						<td><input type="date" class="text" placeholder=""></td>
+						<td class="days"><input min="1" type="number" class="text" placeholder="1 dzień"></td>
+						<td class="name"><input type="title" class="text" placeholder="Lekcja: ..."></td>
+					</tr>
+					<tr class="course_item link">
+						<td><label for="link_video_0">Ссылка на видео-презентацию <i class="fas fa-question-circle-o icon_info" title="Заполнить поле, если у курса есть вступительное видео-презентацию"></i></label></td>
+						<td colspan="3"><input id="link_video_0" type="text" class="text link_video"
+								placeholder="https://..."></td>
+					</tr>
+				</tbody>
+			</table>
+			<button class="button add_course"><i class="fas fa-plus icon_add"></i></button>
+			<button class="button save_courses">Сохранить данные</button>
+		</div>
+	</div>
 	</div>
 
 	<footer>
@@ -111,18 +166,24 @@
 	</footer>
 
 	<!-- Templates -->
+	<template id="tpl_course_item">
+		<tr class="course_item info" data-courseId="-1">
+			<td rowspan="2" class="tools"><i class="fas fa-trash-alt icon_tool remove_course"></i></td>
+			<td><input type="text" class="text" placeholder="Warszawa"></td>
+			<td><input type="date" class="text" placeholder=""></td>
+			<td class="days"><input min="1" type="number" class="text" placeholder="1 dzień" value="1"></td>
+			<td class="name"><input type="title" class="text" placeholder="Lekcja: ..."></td>
+		</tr>
+		<tr class="course_item link" data-courseId="-1">
+			<td><label for="link_video_0">Ссылка на видео-презентацию <i class="fa fa-question-circle-o icon_info" title="Заполнить поле, если у курса есть вступительное видео-презентацию"></i></label></td>
+			<td colspan="3"><input id="link_video_0" type="text" class="text link_video" placeholder="https://..."></td>
+		</tr>
+	</template>
 
-	<!-- JS. JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-	<!-- JS. Slick -->
-	<link rel="stylesheet" type="text/css" href="./lib/slick/slick.css" />
-	<link rel="stylesheet" type="text/css" href="./lib/slick/slick-theme.css" />
-	<script src="./lib/slick/slick.min.js"></script>
-	<script src="./lib/slick-init.js"></script>
 
 	<!-- JS. Common -->
 	<script src="./js/script.js"></script>
+	<script src="./js/adm_courses_offline.js"></script>
 
 	<!-- JS. Custom -->
 
