@@ -18,7 +18,7 @@
     // Add new offline course
     // #event #function
     document.querySelectorAll('.add_course').forEach(element => element.addEventListener('click', () => {
-        /* -- GET NEW ID FROM SERVER -- */
+        /* -- POST-GET NEW ID FROM SERVER -- */
 
         let course_item = document.getElementById('tpl_course_item').content.cloneNode(true);
         course_item.addEventListener('click', remove_offline_course);

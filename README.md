@@ -24,7 +24,8 @@
 3. [x] Courses`s list (*like Bashboard*)v
 4. [ ] Course one
    * [ ] modal-win for edit lecture
-5. [ ] Offline courses
+5. [x] Offline courses
+   * [x] modal-win with rezult after save data
 6. [x] Team
    * [x] modal-win for edit/add personal info
    * [x] template with team-item for dynamic add

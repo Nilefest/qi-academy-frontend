@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Edit course | ADM QI Academy</title>
+
+    <!-- Fonts. Google: Montserrat, Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fonts. Icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0.css">
+
+    <!-- CSS. Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+
+    <!-- CSS. Common -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modals.css">
+    <link rel="stylesheet" href="./css/animations.css">
+
+    <!-- CSS. Custom -->
+    <link rel="stylesheet" href="./css/adm_dashboard.css">
+    <link rel="stylesheet" href="./css/adm_lecture.css">
+</head>
+
+<body class="">
+    <div class="modal">
+        <div class="modal_win modal_simple_info">
+            <p class="message">Сохранено!</p>
+            <button class="button close">Ok</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <a href="adm_dashboard.html" class="logo" title="To main page">
+                <!--				
+				<span class="account_logo">Moje biuro</span>
+				-->
+                <span class="full_text">Qi ADMIN</span>
+                <span class="short_text">Qi</span>
+            </a>
+
+            <a href="#index" class="to_site">QILABEL.COM <i class="fas fa-link icon_link"></i></a>
+
+            <a href="#setting" class="to_setting">Настройки админ панели <i class="fas fa-cog icon_link"></i></a>
+
+            <a href="#logout" class="logout">Выйти</a>
+        </div>
+    </header>
+
+    <div class="content container">
+        <a href="adm_dashboard.html" class="button back">back</a>
+        <h1 class="title">Страница о курсе</h1>
+
+        <div class="course_form">
+            <div class="block_access">
+                <div class="title">Доступ к курсу</div>
+                <div class="field_check">
+                    <input id="is_paid" class="is_paid d-none" type="checkbox">
+                    <label for="is_paid">Платно</label>
+                </div>
+                <div class="field_check">
+                    <input id="access_premium" class="access_premium d-none" type="checkbox">
+                    <label for="access_premium">Бесплатно. Доступно для клентов, которые уже купили какой-то курс.
+                    </label>
+                </div>
+                <div class="field_check">
+                    <input id="is_free" class="is_free d-none" type="checkbox">
+                    <label for="is_free">Беслатно</label>
+                </div>
+            </div>
+
+            <label class="block_banner">
+                <div class="title">
+                    <p>Загрузите главный банер курса. Обязательный размер: 1320 x 590 px. </p>
+                    <p> Чтобы на всех устройствах банер отображался корректно, главную компаозицию поместите в центр,
+                        согласно направляющим линиям.</p>
+                </div>
+                <div class="banner_image">
+                    <i class="fas fa-plus icon_add"></i>
+                    <input type="file" class="d-none" accept="image/png, image/gif, image/jpeg">
+                </div>
+            </label>
+
+            <div class="info_block">
+                <div class="main_info">
+                    <label class="course_name">
+                        <span class="title">Название курса</span>
+                        <textarea class="text" placeholder="Course`s name"></textarea>
+                    </label>
+                    <label>
+                        <input min="1" type="number" class="text">
+                        <span class="title">lekcje</span>
+                    </label>
+                    <label>
+                        <input min="1" type="number" class="text">
+                        <span class="title">godziny</span>
+                    </label>
+                    <label class="course_cost">
+                        <input min="0" type="number" class="text">
+                        <span class="title">Zł</span>
+                    </label>
+                </div>
+                <label class="video_link">
+                    <span class="title">Вставьте ссылку видео-превью </span>
+                    <textarea class="text" placeholder="https://..."></textarea>
+                </label>
+            </div>
+
+            <div class="info_block">
+                <label class="public_description">
+                    <span class="title">Описание курса</span>
+                    <div class="description_text">
+                        <textarea class="text"></textarea>
+                    </div>
+                </label>
+                <div class="description_for">
+                    <div class="title">Dla kogo?</div>
+                    <textarea class="text"></textarea>
+                    <textarea class="text"></textarea>
+                </div>
+            </div>
+
+            <div class="experience_block">
+                <div class="title">Чему научаться на курсе <button class="button exp_add">Добавить <i
+                            class="fas fa-plus icon_add"></i></button></div>
+                <ul class="exp_list">
+                    <li class="exp_item">
+                        <i class="far fa-check-circle icon_tool"></i>
+                        <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+                        <input type="text" class="text">
+                    </li>
+                    <li class="exp_item">
+                        <i class="far fa-check-circle icon_tool"></i>
+                        <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+                        <input type="text" class="text">
+                    </li>
+                    <li class="exp_item">
+                        <i class="far fa-check-circle icon_tool"></i>
+                        <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+                        <input type="text" class="text">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="instructor_block">
+                <label for="select_instructor" class="title">Выберите инструктора из списка</label>
+                <select id="select_instructor" class="text">
+                    <option value="0">Herman Ahafontsev</option>
+                    <option value="0">Herman Ahafontsev</option>
+                    <option value="0">Herman Ahafontsev</option>
+                    <option value="0">Herman Ahafontsev</option>
+                </select>
+            </div>
+
+            <style>
+                /* Block for Lectires`s list and Gallery */
+                .lectures_gallery_block {
+                    margin: 50px 0px 100px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                /* Block Lectires */
+                .lectures_block {
+                    margin-right: 50px;
+                    padding-right: 20px;
+                    width: 50%;
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                .lectures_block h3.title {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .lectures_block .lectures_list {
+                    margin: 0px;
+                    padding: 0px;
+                    margin-bottom: 50px;
+                    border-top: 1px solid #FFF9C6;
+                }
+
+                .lectures_block .lecture_item {
+                    list-style: none;
+                    border-bottom: 1px solid #FFF9C6;
+                    display: flex;
+                    padding: 20px 0px;
+                    max-height: 70px;
+                    overflow: hidden;
+                }
+
+                .lectures_block .lecture_item.open {
+                    max-height: 300px;
+                }
+
+                .lectures_block .icon_down {
+                    position: absolute;
+                    top: 20px;
+                    right: 0px;
+                    display: inline-block;
+                    padding: 5px 0px;
+                }
+
+                .lectures_block .icon_down:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+
+                .lectures_block .lecture_item.open .icon_down {
+                    transform: rotate(180deg);
+                }
+
+                .lectures_block .tools {
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-right: 25px;
+                }
+
+                .lectures_block .lecture_item .title {
+                    margin-bottom: 25px;
+                    white-space: nowrap;
+                    display: block;
+                }
+
+                .lectures_block .lecture_item .icon_tool {
+                    text-align: center;
+                    display: block;
+                    opacity: 0.8;
+                    font-size: 1.1em;
+
+                    opacity: 0;
+                }
+
+                .lectures_block .lecture_item.open .icon_tool {
+                    opacity: 0.8;
+                }
+
+                .lectures_block .lecture_item .icon_tool:hover {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+
+                .lectures_block .lecture_item .fields {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .lectures_block .lecture_item .text {
+                    margin-bottom: 20px;
+
+                    opacity: 0;
+                }
+
+
+                .lectures_block .lecture_item .text:first-child,
+                .lectures_block .lecture_item.open .text {
+                    opacity: 1;
+                }
+
+                .lectures_block .lecture_item input.text {
+                    width: 80%;
+                }
+
+                .lectures_block .lecture_item textarea.text {
+                    min-height: 100px;
+                }
+
+                .lectures_block .lecture_item .button {
+                    background-color: #FFF9C6;
+                    padding: 7px 35px;
+                    border: 1px solid #FFF9C6;
+                    border-radius: 10px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 12px;
+                    width: 80%;
+                }
+
+                .lectures_block .lecture_item .button:hover {
+                    cursor: pointer;
+                    opacity: 0.9;
+                }
+
+                .lectures_block .lecture_item .button .icon_right {
+                    font-size: 1.2em;
+                    margin-left: 10px;
+                    padding: 0px 5px 0px 0px;
+                }
+
+                .lectures_block .lecture_item .button:hover .icon_right {
+                    padding: 0px 0px 0px 5px;
+                }
+
+                .lectures_block .add_lecture {
+                    background-color: #000;
+                    background-color: transparent;
+                    color: #FFF9C6;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border: none;
+                    padding: 5px 0px;
+                }
+
+                .lectures_block .add_lecture .icon_add {
+                    font-size: 1.3em;
+                    margin-left: 10px;
+                }
+
+                .lectures_block .add_lecture:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+
+                /* Block Photos */
+                .gallery_block {
+                    flex-shrink: 0;
+                }
+
+                .gallery_block .title {
+                    margin-bottom: 20px;
+                    display: block;
+                }
+
+                .gallery_block .photos {
+                    display: flex;
+                    align-items: stretch;
+                }
+
+                .gallery_block .photos .col {
+                    width: 200px;
+                    height: 200px;
+                    flex-shrink: 0;
+                }
+
+                .gallery_block .photos .col:first-child {
+                    height: 420px;
+                }
+
+                .gallery_block .photos label {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0px 20px 20px 0px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid #fff;
+                    width: 200px;
+                    height: 100%;
+                    background-position: left;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 0.8;
+                }
+
+                .gallery_block .photos label:hover {
+                    opacity: 1;
+                    cursor: pointer;
+
+                }
+
+                .gallery_block .photos .size {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                }
+
+                .gallery_block .photos .icon_add {
+                    opacity: 0.5;
+                    font-size: 70px;
+                }
+            </style>
+            <div class="lectures_gallery_block">
+                <div class="lectures_block">
+                    <h3 class="title">Program</h3>
+                    <ul class="lectures_list">
+                        <li class="lecture_item">
+                            <div class="tools">
+                                <span class="title"><span class="num">1</span> lekcje</span>
+                                <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+                            </div>
+                            <div class="fields">
+                                <input type="text" class="text" placeholder="Название">
+                                <textarea class="text" placeholder="Короткое описание"></textarea>
+                                <button class="button edit_lectire">Редактировать курс <i
+                                        class="far fa-chevron-double-right icon_right"></i></button>
+                            </div>
+                            <i class="fas fa-chevron-down icon_down"></i>
+                        </li>
+                        <li class="lecture_item open">
+                            <div class="tools">
+                                <span class="title"><span class="num">1</span> lekcje</span>
+                                <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+                            </div>
+                            <div class="fields">
+                                <input type="text" class="text" placeholder="Название">
+                                <textarea class="text" placeholder="Короткое описание"></textarea>
+                                <button class="button edit_lectire">Редактировать курс <i
+                                        class="far fa-chevron-double-right icon_right"></i></button>
+                            </div>
+                            <i class="fas fa-chevron-down icon_down"></i>
+                        </li>
+                        <li class="lecture_item">
+                            <div class="tools">
+                                <span class="title"><span class="num">1</span> lekcje</span>
+                                <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+                            </div>
+                            <div class="fields">
+                                <input type="text" class="text" placeholder="Название">
+                                <textarea class="text" placeholder="Короткое описание"></textarea>
+                                <button class="button edit_lectire">Редактировать курс <i
+                                        class="far fa-chevron-double-right icon_right"></i></button>
+                            </div>
+                            <i class="fas fa-chevron-down icon_down"></i>
+                        </li>
+                    </ul>
+                    <button class="button add_lecture">Добавить <i class="fas fa-plus icon_add"></i></button>
+                </div>
+                <div class="gallery_block">
+                    <span class="title">Загрузите фото</span>
+                    <div class="photos">
+                        <label class="col">
+                            <span class="size">260 x 540 px</span>
+                            <i class="fas fa-plus icon_add"></i>
+                            <input type="file" class="d-none" accept="image/png, image/gif, image/jpeg">
+                        </label>
+                        <div class="col">
+                            <label>
+                                <span class="size">260 x 260 px</span>
+                                <i class="fas fa-plus icon_add"></i>
+                                <input type="file" class="d-none" accept="image/png, image/gif, image/jpeg">
+                            </label>
+                            <label>
+                                <span class="size">260 x 260 px</span>
+                                <i class="fas fa-plus icon_add"></i>
+                                <input type="file" class="d-none" accept="image/png, image/gif, image/jpeg">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq_block">
+                <div class="title">Часто задваемые вопросы</div>
+                <ul class="faq_list">
+                    <li class="faq_item">
+                        <i class="fas fa-trash-alt icon_remove"></i>
+                        <i class="fas fa-chevron-down icon_down"></i>
+                        <input type="text" class="text">
+                        <textarea class="text"></textarea>
+                    </li>
+                    <li class="faq_item open">
+                        <i class="fas fa-trash-alt icon_remove"></i>
+                        <i class="fas fa-chevron-down icon_down"></i>
+                        <input type="text" class="text">
+                        <textarea class="text"></textarea>
+                    </li>
+                    <li class="faq_item">
+                        <i class="fas fa-trash-alt icon_remove"></i>
+                        <i class="fas fa-chevron-down icon_down"></i>
+                        <input type="text" class="text">
+                        <textarea class="text"></textarea>
+                    </li>
+                </ul>
+                <button class="button faq_add">Добавить <i class="fas fa-plus icon_add"></i></button>
+            </div>
+
+            <div class="buttons_block">
+                <input type="button" class="button" value="Сохранить  данные">
+                <input type="button" class="button" value="Удалить курс">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <ul class="contact">
+                <li>
+                    <a href="#watsapp">
+                        <img src="./img/icons/icons8-whatsapp.png" alt="Icon Watsapp">
+                        <span>Watsapp</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#facebook_messenger">
+                        <img src="./img/icons/icons8-facebook-messenger.png" alt="Icon Facebook Messenger">
+                        <span>Facebook Messenger</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#phone">
+                        <img src="./img/icons/icons8-phone.png" alt="Icon Phone">
+                        <span>+48 949 000 555</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer_info">
+                <ul class="links">
+                    <li><a href="#footer_link">Polityka przetwarzania danych osobowych</a></li>
+                    <li><a href="#footer_link">Oferta publiczna</a></li>
+                    <li><a href="#footer_link">Płatność kartą kredytową</a></li>
+                </ul>
+
+                <ul class="social">
+                    <li><a href="#facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+
+                <div class="footer_buttons">
+                    <button class="footer_button">Obszar osobisty</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Templates -->
+    <template id="tpl_faq_item">
+        <li class="faq_item">
+            <i class="fas fa-trash-alt icon_remove"></i>
+            <i class="fas fa-chevron-down icon_down"></i>
+            <input type="text" class="text">
+            <textarea class="text"></textarea>
+        </li>
+    </template>
+
+    <template id="tpl_exp_item">
+        <li class="exp_item">
+            <i class="far fa-check-circle icon_tool"></i>
+            <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+            <input type="text" class="text">
+        </li>
+    </template>
+
+    <template id="tpl_lecture_item">
+        <li class="lecture_item">
+            <div class="tools">
+                <span class="title"><span class="num">1</span> lekcje</span>
+                <i class="fas fa-trash-alt icon_tool icon_remove"></i>
+            </div>
+            <div class="fields">
+                <input type="text" class="text" placeholder="Название">
+                <textarea class="text" placeholder="Короткое описание"></textarea>
+                <button class="button edit_lectire">Редактировать курс <i
+                        class="far fa-chevron-double-right icon_right"></i></button>
+            </div>
+            <i class="fas fa-chevron-down icon_down"></i>
+        </li>
+    </template>
+
+    <!-- JS. Common -->
+    <script src="./js/script.js"></script>
+
+    <!-- JS. Custom -->
+    <script src="./js/adm_course.js"></script>
+
+</body>
+
+</html>
