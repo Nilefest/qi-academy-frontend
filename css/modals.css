@@ -128,7 +128,7 @@
 	color: #000;
 }
 
-/* Modal. Team ADM */
+/* Modal. ADM. Edit Team */
 .modal_win.modal_show.modal_team_adm {
 	display: flex;
 }
@@ -357,7 +357,7 @@
 	padding: 10px 0px;
 }
 
-/* Modal. Booking to offline course */
+/* Modal. ADM. Booking to offline course */
 .modal_book_offline {
 	display: none;
 	justify-content: space-between;
@@ -501,7 +501,7 @@
 	height: 100%;
 }
 
-/* Modal get sertificate */
+/* Modal. Profile. Get sertificate */
 .modal_get_sertificate {
 	background-color: #fff;
 	padding: 50px 60px;
@@ -612,6 +612,164 @@
 	cursor: pointer;
 }
 
+/* Modal. ADM. Edit lecture */
+.modal_lecture {
+	margin: 0px;
+	padding: 80px 150px 80px 70px;
+	background-color: #000;
+	border-radius: 0px;
+	height: 100vh;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+.modal_lecture.modal_show {
+	display: flex;
+}
+
+.modal_lecture .icon_close {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 50px 50px;
+	padding: 10px;
+	font-size: 1.3em;
+	opacity: 0.8;
+}
+
+.modal_lecture .icon_close:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.modal_lecture .lecture_data {
+	margin-right: 120px;
+	flex-grow: 1;
+}
+
+.modal_lecture .lecture_data .field_block {
+	display: flex;
+	margin-bottom: 25px;
+}
+
+.modal_lecture .lecture_data .title {
+	font-weight: 700;
+	font-size: 14px;
+	max-width: 200px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.modal_lecture .lecture_data .field_block .text {
+	border-radius: 10px;
+	border: 1px solid #fff;
+	padding: 10px 15px;
+	background-color: #000;
+	background-color: transparent;
+	color: #fff;
+	flex-grow: 1;
+}
+
+.modal_lecture .lecture_data .field_block textarea.text {
+	min-height: 150px;
+	max-height: 400px;
+}
+
+.modal_lecture .lecture_data .icon_file {
+	border: 1px solid #fff;
+	border-radius: 10px;
+	padding: 7px 10px;
+	font-size: 1.2em;
+	display: inline-block;
+	margin-right: 15px;
+	opacity: 0.8;
+	vertical-align: text-bottom;
+	align-self: flex-start;
+}
+
+.modal_lecture .lecture_data a.icon_file {
+	margin-top: 5px;
+	padding: 8px 13px;
+}
+
+.modal_lecture .lecture_data a.icon_file span {
+	font-style: italic;
+	font-size: 0.9em;
+	padding: 0px 5px 0px 10px;
+	font-family: 'Lato', sans-serif;
+}
+
+.modal_lecture .lecture_data .icon_file:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.modal_lecture .lecture_data input.file:hover~label .icon_file {
+	opacity: 1;
+}
+
+.modal_lecture .homework_block {
+	background-color: #191C21;
+	border-radius: 10px;
+	padding: 20px 40px;
+	font-family: 'Montserrat', sans-serif;
+	align-self: stretch;
+	width: 400px;
+	max-height: 500px;
+}
+
+.modal_lecture .homework_block .title {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	align-self: flex-start;
+	width: 100%;
+	display: block;
+}
+
+.modal_lecture .homework_block .text {
+	background-color: #191C21;
+	background-color: transparent;
+	border: none;
+	border: 1px solid #555;
+	min-height: 100px;
+	max-height: 400px;
+	width: 100%;
+	color: #fff;
+	opacity: 0.8;
+	margin-bottom: 20px;
+	height: 85%;
+}
+
+.modal_lecture .buttons {
+	width: 100%;
+	padding: 50px 0px 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.modal_lecture .button {
+	background-color: #fff;
+	color: #000;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	opacity: 1;
+	font-weight: 700;
+	font-size: 14px;
+	align-self: flex-start;
+}
+
+.modal_lecture .button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
 /* Message about Cookie */
 .cookie_message {
 	border-radius: 10px;
@@ -693,7 +851,7 @@
 	cursor: pointer;
 }
 
-/* Modal for send review */
+/* Modal. Profile. for send review */
 .modal_send_review {
 	max-width: 500px;
 	background-color: #fff;
