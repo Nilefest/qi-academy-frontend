@@ -22,8 +22,8 @@
 1. [x] Login
 2. [x] Dashboard
 3. [x] Courses`s list (*like Bashboard*)v
-4. [ ] Course one
-   * [ ] modal-win for edit lecture
+4. [x] Course one
+   * [x] modal-win for edit lecture
 5. [x] Offline courses
    * [x] modal-win with rezult after save data
 6. [x] Team
